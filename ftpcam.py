@@ -1,5 +1,5 @@
 '''
-ftpcam Chimera instrument for automatization of extinction coefficients from allsky images. 
+ftpcam Chimera controller for automatization of extinction coefficients from allsky images. 
 Created by Pedro H. Bernardinelli on Jan 22, 2016.
 
 Allsky function by Germano S. Bortolotto, modified by Pedro. 
@@ -15,6 +15,8 @@ and all the allsky files are stored in the images and stars folders.
 import time
 import os
 import shutil
+
+from chimera.core.chimeraobject import ChimeraObject
 
 from allsky import *
 
