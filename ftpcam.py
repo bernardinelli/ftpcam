@@ -24,7 +24,7 @@ from ftplib import FTP
 #Parameters for Allsky:
 #Highest values of star magnitudes (between 2 and 3 for best results)
 star_mag = 2
-#Filter used (B or V)
+#Filter used (B or R)
 filter_used = "B"
 #Sigma deviations for outliers (between 1.5 and 3)
 sigma_dev = 1.5
@@ -100,24 +100,24 @@ def test():
 	a = Ftpcam()
 	print "Ftpcam testing script! Let's see if this works."
 
-	print "Enter all string values between quotation marks so Python doesn't think they are variables or numbers."
+	#print "Enter all string values between quotation marks so Python doesn't think they are variables or numbers."
 
-	ftp = input("Enter the ftp address:")
-	usr = input("User name:")
-	pwd = input("Password:")
+	ftp = raw_input("Enter the ftp address:")
+	usr = raw_input("User name:")
+	pwd = raw_input("Password:")
 	a.set_ftp(str(ftp), str(usr), str(pwd))
 
-	folder_1 = input("Enter the path to folder where the images are located in the ftp, ending in /:")
-	folder_2 = input("Enter the path to the main ftpcam folder, where the images and stars folders are located, again ending in /:")
+	folder_1 = raw_input("Enter the path to folder where the images are located in the ftp, ending in /:")
+	folder_2 = raw_input("Enter the path to the main ftpcam folder, where the images and stars folders are located, again ending in /:")
 	a.set_folder(str(folder_1), str(folder_2))
 
 	mag = input("Enter the highest value of the star magnitudes in the images (from 2 to 3):")
-	fil = input("Enter the filter used in the images (B or V)")
+	fil = raw_input("Enter the filter used in the images (B or R)")
 	sig = input("Enter the sigma deviations to eliminate outliers (from 1.5 to 3):")
 	ite = input("Enter the number of iterations for AllSky (from 10 to 20 for optimal results):")
 	a.set_params(float(mag), str(fil), float(sig), int(ite))
 
-	print "Go get a cup of coffee or something, everything is set! Ftpcam will start running (hopefully)"
+	print "Everything is set! Ftpcam will start running (hopefully)"
 
 	a.ftpcam()
 
