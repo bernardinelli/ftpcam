@@ -9,6 +9,7 @@ sigma deviations from best fit and number of iterations (both to eliminate outli
 Two .dat files are created in the process inside the images folder. All the .fits files are moved to the analysed folder,
 and all the allsky files are stored in the images and stars folders. 
 
+This version uses the chimera object so it becomes a chimera controller.
 
 '''
 
