@@ -34,7 +34,8 @@ sigma_dev = 1.5
 #Number of iterations (over 10, more if you wish)
 niter = 20
 
-class Ftpcam:
+class Ftpcam(ChimeraObject):
+	ChimeraObject.__init__(self)
 	def __init__(self):
 		self.ftp = ["","",""] #address, username and password
 		self.folder = ["",""] #ftp images folder and local directory where AllSky will perform
