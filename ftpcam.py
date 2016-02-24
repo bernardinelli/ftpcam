@@ -35,8 +35,8 @@ sigma_dev = 1.5
 niter = 20
 
 class Ftpcam(ChimeraObject):
-	ChimeraObject.__init__(self)
 	def __init__(self):
+		ChimeraObject.__init__(self)
 		self.ftp = ["","",""] #address, username and password
 		self.folder = ["",""] #ftp images folder and local directory where AllSky will perform
 		self.params = [2, "B", 1.5, 20] #highest star magnitude, filter used, sigma deviations from best fit and number of iterations to eliminate outliers
